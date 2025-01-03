@@ -6,6 +6,33 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## High-Level Approach
+The project simulates a falling rain effect using a grid of cells. Here's a high-level approach to solve this problem:
+
+Grid Setup:
+
+Define the grid size with a specified number of rows and columns.
+Create a grid of cells using CSS Grid Layout.
+Drops Initialization:
+
+Initialize drops at random positions in the grid.
+Each drop has a position and a trail to simulate the falling effect.
+Animation:
+
+Use setInterval to update the position of each drop periodically.
+As the drop moves down, update its trail to create a fading effect.
+Color Change:
+
+Use another setInterval to change the color of the drops periodically.
+Generate random colors for the drops.
+Rendering:
+
+Render the grid with cells.
+Apply styles to cells based on the drop's position and trail.
+Use CSS transitions for smooth animation effects.
+Performance Measurement:
+
+Optionally, measure the performance of the app using reportWebVitals.
 ### `npm start`
 
 Runs the app in the development mode.\
