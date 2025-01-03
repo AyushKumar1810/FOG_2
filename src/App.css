@@ -1,0 +1,54 @@
+/* App styling */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Grid container */
+.grid {
+  display: grid;
+  gap: 0; /* No gap between cells for continuous grid lines */
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent calc(100% / 30 - 1px),
+      grey calc(100% / 30 - 1px),
+      grey calc(100% / 30)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent calc(100% / 20 - 1px),
+      grey calc(100% / 20 - 1px),
+      grey calc(100% / 20)
+    );
+  background-color: black; /* Light lavender-like background */
+  position: relative; /* Positioning for any potential overlays */
+}
+
+/* Grid cells */
+.cell {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: transparent; /* Transparent cells to show the grid background */
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  position: relative;
+  z-index: 1; /* Ensure cells are above the background */
+}
+
+/* Active cell (main drop) */
+.cell.active {
+  background-color: magenta;
+  box-shadow: 0 0 15px magenta, 0 0 30px magenta;
+}
+
+/* Trail cells */
+.cell:not(.active) {
+  transition: opacity 0.2s ease-in-out;
+}
